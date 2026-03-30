@@ -20,7 +20,7 @@ export default function App() {
 
           <div>
             <a
-              href="https://github.com"
+              href="https://github.com/JavaTypedScript/stdlib-showcase"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
