@@ -1,0 +1,135 @@
+/* Dark IDE theme: modern developer tool aesthetic */
+body, #root {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #10131a;
+  color: #c7d2e9;
+  font-family: var(--font);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a { color: #76d0ff; }
+
+/* Global: panels and cards */
+.panel {
+  background: #121824;
+  border: 1px solid #1f2a3c;
+  box-shadow: var(--shadow);
+  
+}
+
+/* Header specific */
+.header-container {
+  background: #121924;
+  border: 1px solid #293447;
+  
+  box-shadow: 0 12px 28px -16px rgba(0, 0, 0, 0.7);
+}
+
+.header-heading {
+  color: #e0e8ff;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.header-subtitle {
+  color: #9fb6d6;
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+
+.logo-image {
+  height: 2.35rem;
+  max-width: 2.35rem;
+  object-fit: contain;
+}
+
+/* Accent variants */
+.indicator-primary { color: #76d0ff; }
+.indicator-success { color: #22d780; }
+.indicator-error   { color: #f96c6c; }
+
+/* Utility extra */
+.card-strong {
+  background: #0f1320;
+  border: 1px solid #21304a;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg,#3e8cff,#69c3ff);
+  color: #0b0f18;
+  border: 1px solid #67b8f7;
+}
+
+
+.social-link {
+  
+  background: var(--social-bg);
+  display: flex;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.social-link:hover {
+  box-shadow: var(--shadow);
+}
+
+.social-link .button-icon {
+  height: 18px;
+  width: 18px;
+}
+
+@media (max-width: 1024px) {
+  .social-list {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-list li {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .social-list a {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
